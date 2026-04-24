@@ -11,7 +11,7 @@ terraform {
   backend "s3" {
     bucket         = "jpioc-terraform-state"
     key            = "personal-website/terraform.tfstate"
-    region         = var.aws_region
+    region         = "ap-southeast-2"
     dynamodb_table = "terraform-state-lock"
     encrypt        = true
   }
