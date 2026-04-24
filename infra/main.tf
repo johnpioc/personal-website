@@ -28,5 +28,5 @@ resource "aws_s3_object" "site_files" {
   key          = each.value
   source       = "../src/${each.value}"
   content_type = lookup(local.mime_types, regex("\\.[^.]+$", each.value), "application/octet-stream")
-  etag         = filemd5("../${each.value}")
+  etag         = filemd5("../src/${each.value}")
 }
