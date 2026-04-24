@@ -1,0 +1,53 @@
+body {
+    font-family: "Ubuntu", "sans-serif";
+    background-color: #fbf8f7;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+}
+
+#header {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.desc {
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    color: #242124;
+}
+
+#socials-list {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+#socials-list li {
+    list-style: none;
+}
+
+#socials-list li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0;
+    color: black;
+}
+
+#socials-list li a * {
+    margin: 0 0.25rem;
+    font-size: 1rem;
+    color: #242124;
+}
+
+
+@media (width >=50rem) {
+    .container {
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+}
