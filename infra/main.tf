@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "site" {
 }
 
 resource "aws_s3_bucket_public_access_block" "site" {
-  bucket = aws_s3_buket.site.id
+  bucket = aws_s3_bucket.site.id
 
   block_public_acls       = true
   block_public_policy     = true
