@@ -1,9 +1,9 @@
-resource "aws_s3_bucket" "personal_site_content" {
+resource "aws_s3_bucket" "site" {
   bucket = "${var.project_name}-site-content-bucket"
 }
 
-resource "aws_s3_bucket_public_access_block" "personal_site_content" {
-  bucket = aws_s3_buket.personal_site_content.id
+resource "aws_s3_bucket_public_access_block" "site" {
+  bucket = aws_s3_buket.site.id
 
   block_public_acls       = true
   block_public_policy     = true
