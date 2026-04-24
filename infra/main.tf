@@ -26,7 +26,7 @@ resource "aws_s3_object" "site_files" {
 
   bucket       = aws_s3_bucket.site.id
   key          = each.value
-  source       = "../site/${each.value}"
+  source       = "../src/${each.value}"
   content_type = lookup(local.mime_types, regex("\\.[^.]+$", each.value), "application/octet-stream")
   etag         = filemd5("../${each.value}")
 }
