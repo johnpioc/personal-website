@@ -30,3 +30,13 @@ resource "aws_s3_object" "site_files" {
   content_type = lookup(local.mime_types, regex("\\.[^.]+$", each.value), "application/octet-stream")
   etag         = filemd5("../src/${each.value}")
 }
+
+# ACM Certificate
+resource "aws_acm_certificate" "cert" {
+  domain_name       = var.domain_name
+  validation_method = "DNS"
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
